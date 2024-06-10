@@ -76,7 +76,7 @@ router.post("/payment", cors(), async (req, res) => {
 			description: "Booking company",
 			payment_method: id,
 			confirm: true,
-            return_url: "http://localhost:8000/"
+            // return_url: "http://localhost:8000/"
 		})
     
 		res.json({

@@ -76,7 +76,7 @@ exports.signup = async (req, res, next) => {
       from: 'office@rezervari.ro',
       to: email,
       subject: 'Sending Email using Node.js[nodemailer]',
-      text:'http://localhost:8000/confirm-account-registry/' + registryToken +' Your registry token is: '+ registryToken
+      text:'/confirm-account-registry/' + registryToken +' Your registry token is: '+ registryToken
     };
 
     try{
@@ -244,7 +244,7 @@ exports.confirmAccountFromEmail = async (req, res, next) => {
     await user.save();
 
     res.writeHead(302, {
-      Location: 'http://localhost:3000/auth?mode=login'
+      Location: '/auth?mode=login'
     });
   res.end()
 
