@@ -7,6 +7,7 @@ const userRoutes = require("../routes/user")
 const saleRoutes = require("../routes/sale")
 
 module.exports = (app) => {
+  app.use(express.static('public'));
   app.use(express.json());
   app.use(authRoutes);
   app.use("/place", placeRoutes);
